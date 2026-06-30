@@ -1,0 +1,203 @@
+/* General Textarea Styling */
+textarea {
+    min-height: 400px;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e2e2e2;
+    border-radius: 12px;
+    font-size: 15px;
+    font-family: "Segoe UI", sans-serif;
+    background: #fffafc;
+    color: #333;
+    resize: vertical;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.06);
+    transition: all 0.3s ease;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #d77fa1;
+    box-shadow: 0 0 8px rgba(215, 127, 161, 0.4);
+}
+
+/* Timestamp */
+.timestamp {
+    float: right;
+    font-size: 13px;
+    color: rgb(120, 120, 120);
+    font-style: italic;
+}
+
+/* Email Items */
+.email-item {
+    border: 1px solid #e8e8e8;
+    padding: 14px;
+    margin: 8px 0;
+    border-radius: 12px;
+    cursor: pointer;
+    background: #ffffff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    transition: all 0.25s ease-in-out;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* Hover effect */
+.email-item:hover {
+    background-color: #fff0f6;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Unread */
+.email-item.unread {
+    background-color: #fff;
+    border-left: 4px solid #ffb3c6;
+    font-weight: 600;
+}
+
+/* Read */
+.email-item.read {
+    background-color: #f2f2f2;
+    color: #555;
+    border-left: 4px solid #b0b0b0;
+}
+
+/* ===== Global Reset ===== */
+body {
+    font-family: "Poppins", "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #fafafa, #f0f0f8);
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+/* ===== Compose Email Section ===== */
+form.compose-form {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    max-width: 700px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form.compose-form input,
+form.compose-form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 14px;
+    transition: all 0.2s ease-in-out;
+}
+
+form.compose-form input:focus,
+form.compose-form textarea:focus {
+    border-color: #8b5cf6; /* fancy purple */
+    outline: none;
+    box-shadow: 0 0 6px rgba(139, 92, 246, 0.4);
+}
+
+form.compose-form button {
+    align-self: flex-end;
+    background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+    color: white;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+form.compose-form button:hover {
+    background: linear-gradient(135deg, #6d28d9, #4c1d95);
+    transform: scale(1.05);
+}
+
+/* ===== Email Display Section ===== */
+.email-display {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    margin: 25px auto;
+    max-width: 800px;
+}
+
+.email-display h2 {
+    margin: 0 0 15px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #4c1d95;
+}
+
+.email-display .timestamp {
+    float: right;
+    font-size: 12px;
+    color: #777;
+}
+
+.email-display .email-meta {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #555;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.email-display .email-body {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+    white-space: pre-wrap; /* keeps formatting of emails */
+}
+
+.user-email{
+    display: inline;
+    font-size: 1 rem;
+    color: black;
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+/* Email quoted block */
+.email-body {
+  margin-top: 10px;
+  white-space: pre-wrap; /* preserves line breaks */
+}
+
+.email-quote {
+  margin-left: 20px;
+  padding-left: 10px;
+  border-left: 3px solid #ccc;
+  color: #555;
+  font-style: italic;
+}
+
+.email-reply {
+  margin-top: 15px;
+  margin-left: 10px;
+  padding: 8px;
+  background: #f1f7ff;
+  border-left: 3px solid #007bff;
+  color: #222;
+}
+
+
+#compose-body {
+  min-height: 200px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px;
+  background: #fff;
+}
+#compose-body:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+}
